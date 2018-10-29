@@ -1,12 +1,12 @@
 eureka:
   client:
     service-url:
-      # Ö¸¶¨eureka·şÎñÆ÷µÄµØÖ·
+      # æŒ‡å®šeurekaæœåŠ¡å™¨çš„åœ°å€
       defaultZone: http://localhost:8761/eureka/ # ,http://localhost:8762/eureka/,http://localhost:8763/eureka/
-#  ÉèÖÃÖ÷»úÃû
+#  è®¾ç½®ä¸»æœºå
 #  instance:
 #    hostname: clientName
 spring:
   application:
-    # Ö¸¶¨½øĞĞ·şÎñ×¢²áÊ±¸Ã·şÎñµÄÃû³Æ
+    # æŒ‡å®šè¿›è¡ŒæœåŠ¡æ³¨å†Œæ—¶è¯¥æœåŠ¡çš„åç§°
     name: client
