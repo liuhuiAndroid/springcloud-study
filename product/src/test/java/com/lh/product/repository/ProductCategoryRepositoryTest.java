@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Component
+
 public class ProductCategoryRepositoryTest extends ProductInfoRepositoryTest {
 
     @Autowired
@@ -18,6 +19,7 @@ public class ProductCategoryRepositoryTest extends ProductInfoRepositoryTest {
     @Test
     public void findByCategoryTypeIn() {
         List<ProductCategory> list = productCategoryRepository.findByCategoryTypeIn(Arrays.asList(1, 22));
+        System.err.println(list);
         Assert.assertTrue(list.size() > 0);
     }
 

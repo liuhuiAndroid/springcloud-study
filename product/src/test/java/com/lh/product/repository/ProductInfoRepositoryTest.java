@@ -21,12 +21,14 @@ public class ProductInfoRepositoryTest extends ProductApplicationTests {
     @Test
     public void findByProductStatus() {
         List<ProductInfo> list = productInfoRepository.findByProductStatus(0);
+        System.err.println(list);
         Assert.assertTrue(list.size() > 0);
     }
 
     @Test
     public void findByProductIdIn() {
-        List<ProductInfo> list = productInfoRepository.findByProductIdIn(Arrays.asList("157875196366160022", "157875227953464068"));
+        List<ProductInfo> list = productInfoRepository.findByProductIdIn(Arrays.asList("157875196366160022", "157875227953464069"));
+        System.err.println(list);
         Assert.assertTrue(list.size() > 0);
     }
 

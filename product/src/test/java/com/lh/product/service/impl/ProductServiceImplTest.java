@@ -21,6 +21,7 @@ public class ProductServiceImplTest extends ProductApplicationTests {
     @Test
     public void findUpAll() {
         List<ProductInfo> list = productService.findUpAll();
+        System.err.println(list);
         Assert.assertTrue(list.size() > 0);
     }
 

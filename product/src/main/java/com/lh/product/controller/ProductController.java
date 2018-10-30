@@ -54,9 +54,11 @@ public class ProductController {
             productVo.setCategoryType(productCategory.getCategoryType());
             List<ProductInfoVo> productInfoVos = new ArrayList<>();
             for (ProductInfo productInfo: productInfoList) {
-                ProductInfoVo productInfoVo = new ProductInfoVo();
-                BeanUtils.copyProperties(productInfo,productInfoVo);
-                productInfoVos.add(productInfoVo);
+                if (productInfo.getCategoryType().equals(productCategory.getCategoryType())) {
+                    ProductInfoVo productInfoVo = new ProductInfoVo();
+                    BeanUtils.copyProperties(productInfo, productInfoVo);
+                    productInfoVos.add(productInfoVo);
+                }
             }
             productVo.setProductInfoVOList(productInfoVos);
             ProductVo.add(productVo);
