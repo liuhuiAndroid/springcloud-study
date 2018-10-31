@@ -15,4 +15,8 @@ spring:
   jpa:
     show-sql: true
 server:
-  port: 8081
+  port: 8085
+
+PRODUCT: # 应用名称
+  ribbon:
+   NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
