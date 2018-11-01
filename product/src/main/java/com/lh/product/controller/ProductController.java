@@ -1,5 +1,6 @@
 package com.lh.product.controller;
 
+import com.lh.product.dataobject.DecreaseStock;
 import com.lh.product.dataobject.ProductCategory;
 import com.lh.product.dataobject.ProductInfo;
 import com.lh.product.service.CategoryService;
@@ -10,9 +11,7 @@ import com.lh.product.vo.ProductVo;
 import com.lh.product.vo.ResultVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,4 +65,20 @@ public class ProductController {
 
         return ResultVoUtil.success(ProductVo);
     }
+
+    /**
+     * 获取商品列表(给订单服务用的)
+     * @param productIdList
+     * @return
+     */
+    @PostMapping("/listForOrder")
+    public List<ProductInfo> listForOrder(@RequestBody List<String> productIdList) {
+        return productService.findList(productIdList);
+    }
+
+    @PostMapping("/decreaseStock")
+    public void decreaseStock(@RequestBody List<DecreaseStock> decreaseStockList) {
+        productService.decreaseStock(decreaseStockList);
+    }
+
 }
