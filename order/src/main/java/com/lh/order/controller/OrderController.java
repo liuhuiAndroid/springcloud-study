@@ -35,7 +35,7 @@ public class OrderController {
      * 3. 计算总价
      * 4. 扣库存(调用商品服务)
      * 5. 订单入库
-     * 测试数据：{"name": "1","phone": "2","address": "3","openid": "4","items": "[{\"productId\": \"\",\"productQuantity\": 2 }]"}
+     * 测试数据：{"name": "1","phone": "2","address": "3","openid": "4","items": "[{\"productId\": \"157875196366160022\",\"productQuantity\": 1 }]"}
      */
     @PostMapping("/create")
     public ResultVo<Map<String, String>> create(@RequestBody @Valid OrderForm orderForm, BindingResult bindingResult) {
