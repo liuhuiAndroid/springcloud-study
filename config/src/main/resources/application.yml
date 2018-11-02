@@ -11,3 +11,18 @@ spring:
         git:
           uri: https://github.com/liuhuiAndroid/spring-cloud-study-config-repo
           basedir: E:\study_project\springcloud-study\config\basedir
+  rabbitmq:
+    addresses: 132.232.100.191:5672
+    username: guest
+    password: guest
+    virtual-host: /
+    listener:
+      simple:
+        acknowledge-mode: manual
+        concurrency: 5
+        max-concurrency: 10
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
