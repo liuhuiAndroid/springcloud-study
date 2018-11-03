@@ -10,7 +10,7 @@ spring:
       server:
         git:
           uri: https://github.com/liuhuiAndroid/spring-cloud-study-config-repo
-          basedir: E:\study_project\springcloud-study\config\basedir
+          basedir: D:\JavaStudy\springcloud-study\config\basedir
   rabbitmq:
     addresses: 132.232.100.191:5672
     username: guest
