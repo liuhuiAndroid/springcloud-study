@@ -18,4 +18,3 @@ spring:
         myMessage:
           group: order
           content-type: application/json
-
