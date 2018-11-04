@@ -13,13 +13,9 @@ spring:
         enabled: true
         service-id: CONFIG
       profile: release
-  rabbitmq:
-    addresses: 132.232.100.191:5672
-    username: guest
-    password: guest
-    virtual-host: /
-    listener:
-      simple:
-        acknowledge-mode: manual
-        concurrency: 5
-        max-concurrency: 10
+    stream:
+      bindings:
+        myMessage:
+          group: order
+          content-type: application/json
+
